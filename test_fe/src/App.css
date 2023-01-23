@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+  max-width: 1080px;
+  position: relative;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.done {
+  background-color: green !important;
+  border-color: green !important;
+  color: white !important;
+}
+
+.todo {
+  background-color: red !important;
+  border-color: red !important;
+  color: white !important;
+}
+
+.weather-wp {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.weather-temp {
+  font-size: 42px;
+  font-weight: 500;
+  border-right: solid;
+  padding-right: 15px;
+  height: 52px;
+}
+
+.description-weather {
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.title-weather{
+  font-size: 42px;
+  padding-right: 12px;
+}
+
+.search-btn {
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 12px;
+}
+
+.weather-icon {
+  margin-left: 400px;
+  position: absolute;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 5s ;
+  z-index: -1;
+}
+@keyframes run {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(100% - 90%);
+    -webkit-transform: rotateY(180deg); 
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
